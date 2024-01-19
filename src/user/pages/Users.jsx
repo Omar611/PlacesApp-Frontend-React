@@ -1,9 +1,11 @@
 import React from "react";
+import UsersList from "../components/UsersList";
 
 const Users = () => {
+	const USERS = [{ id: "u1", name: "Max Schwarz", image: "https://picsum.photos/200", places: 3 }];
 	return (
 		<div>
-			<h1>Users Works!</h1>
+			<UsersList items={USERS} />
 		</div>
 	);
 };
