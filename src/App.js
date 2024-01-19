@@ -1,8 +1,17 @@
-import logo from "./logo.svg";
+import React from "react";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import "./App.css";
+import Users from "./user/pages/Users";
 
 function App() {
-	return <h1>Let's start!</h1>;
+	return (
+		<Router>
+			<Route path="/" exact>
+				<Users />
+			</Route>
+			<Redirect to="/" />
+		</Router>
+	);
 }
 
 export default App;
