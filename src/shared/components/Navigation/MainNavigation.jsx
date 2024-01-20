@@ -14,13 +14,11 @@ const MainNavigation = () => {
 	return (
 		<React.Fragment>
 			{drawerIsOpen ? <Backdrop onClick={closeDrawer} /> : null}
-			{drawerIsOpen ? (
-				<SideDrawer>
-					<nav className="main-navigation__drawer-nav">
-						<NavLinks />
-					</nav>
-				</SideDrawer>
-			) : null}
+			<SideDrawer show={drawerIsOpen}>
+				<nav className="main-navigation__drawer-nav">
+					<NavLinks />
+				</nav>
+			</SideDrawer>
 			<MainHeader>
 				<button className="main-navigation__menu-btn" onClick={openDrawer}>
 					<span></span>
