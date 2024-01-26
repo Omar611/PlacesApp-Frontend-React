@@ -6,6 +6,8 @@
 .form-control input,
 .form-control textarea {
 	display: block;
+	border-radius: 8px;
+	padding: 8px !important;
 }
 
 .form-control label {
