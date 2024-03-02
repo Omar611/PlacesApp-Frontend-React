@@ -4,6 +4,7 @@ import {
 	VALIDATOR_MINLENGTH,
 	VALIDATOR_REQUIRE,
 } from "../../shared/util/validators";
+import Button from "../../shared/components/FormElements/Button";
 import "./NewPlace.css";
 
 const formReducer = (state, action) => {
@@ -34,7 +35,7 @@ const formReducer = (state, action) => {
 };
 
 const NewPlace = () => {
-	const [fomState, dispatch] = useReducer(formReducer, {
+	const [formState, dispatch] = useReducer(formReducer, {
 		inputs: {
 			title: {
 				value: "",
@@ -73,6 +74,10 @@ const NewPlace = () => {
 				errorText="Please enter a valid description. (at least 5 characters)"
 				onInput={inputHandler}
 			/>
+
+			<Button type="submit" disabled={!formState.isValid}>
+				Add Place
+			</Button>
 		</form>
 	);
 };
